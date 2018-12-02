@@ -1,0 +1,20 @@
+/*******************************************************************************
+ * Fonts
+ *******************************************************************************/
+@font-face
+{
+    font-family: 'Geometria';
+    font-weight: 400;
+    font-style: normal;
+
+    src: url('../fonts/Geometria/Geometria.eot?#iefix') format('embedded-opentype'), url('../fonts/Geometria/Geometria.woff') format('woff'), url('../fonts/Geometria/Geometria.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Geometria';
+    font-weight: 500;
+    font-style: normal;
+
+    src: url('../fonts/Geometria-Medium/Geometria-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Geometria-Medium/Geometria-Medium.woff') format('woff'), url('../fonts/Geometria-Medium/Geometria-Medium.ttf') format('truetype');
+}

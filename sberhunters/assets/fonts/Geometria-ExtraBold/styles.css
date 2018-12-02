@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'Geometria-ExtraBold';
+  src: url('Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'),  url('Geometria-ExtraBold.otf')  format('opentype'),
+	     url('Geometria-ExtraBold.woff') format('woff'), url('Geometria-ExtraBold.ttf')  format('truetype'), url('Geometria-ExtraBold.svg#Geometria-ExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
