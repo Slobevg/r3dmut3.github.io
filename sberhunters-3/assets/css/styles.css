@@ -1,0 +1,841 @@
+@charset 'UTF-8';
+/*******************************************************************************
+ * v1.0.0
+ * 15-12-2018, @r3dmut3
+ *******************************************************************************/
+/*******************************************************************************
+ * Logo
+ *******************************************************************************/
+.logo
+{
+    position: relative;
+
+    width: 100%;
+}
+.logo__image
+{
+    width: 100%;
+    padding-bottom: 19.367588933%;
+
+    background-image: url('../images/logo.svg'); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+/*******************************************************************************
+ * Title
+ *******************************************************************************/
+.title
+{
+    width: 100%;
+    height: auto;
+}
+.title__headline
+{
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+.title__svg,
+.title__svg__image
+{
+    display: block;
+}
+.title__svg::after,
+.title__svg::before
+{
+    display: table; 
+
+    content: ' ';
+}
+.title__svg::after
+{
+    clear: both;
+}
+.title__svg__image
+{
+    width: 100%;
+
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: contain;
+}
+.title:after
+{
+    display: block;
+
+    width: 100%;
+    padding-bottom: 3.633491311%;
+
+    content: '';
+
+    background-image: url('../images/elements/line.svg');
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+}
+
+.title,
+.title__svg
+{
+    margin-bottom: 1.25rem;
+}
+
+/*******************************************************************************
+ * Tips/tip
+ *******************************************************************************/
+.tip
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+.tip__wrapper
+{
+    position: relative;
+
+    width: 100%;
+    padding-bottom: 50%;
+}
+.tip__content
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+}
+.tip__content p
+{
+    font-size: 1.5rem;
+
+    padding-right: 1.25rem; 
+    padding-left: 1.25rem;
+}
+.tip .border
+{
+    position: absolute;
+}
+.tip .border--top,
+.tip .border--bottom
+{
+    width: 100%;
+}
+.tip .border--top
+{
+    top: 0;
+    right: 0;
+    left: 0;
+
+    min-height: .2rem; 
+    padding-bottom: .6%;
+
+    background-image: url('../images/tips/border__top.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.tip .border--bottom
+{
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding-bottom: 26.025236593%;
+
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+}
+.tip .border--right,
+.tip .border--left
+{
+    top: 0;
+    bottom: 0;
+
+    width: .6%;
+    height: 100%; 
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.tip .border--right
+{
+    right: 0;
+
+    background-image: url('../images/tips/border__right.svg');
+}
+.tip .border--left
+{
+    left: 0;
+
+    background-image: url('../images/tips/border__left.svg');
+}
+.tip--1 .border--bottom
+{
+    background-image: url('../images/tips/border__1.svg');
+}
+.tip--2 .border--bottom
+{
+    background-image: url('../images/tips/border__2.svg');
+}
+.tip--3 .border--bottom
+{
+    background-image: url('../images/tips/border__3.svg');
+}
+.tip--4 .border--bottom
+{
+    background-image: url('../images/tips/border__4.svg');
+}
+.tip--5 .border--bottom
+{
+    background-image: url('../images/tips/border__5.svg');
+}
+.tip--6 .border--bottom
+{
+    background-image: url('../images/tips/border__6.svg');
+}
+.tip--7 .border--bottom
+{
+    background-image: url('../images/tips/border__7.svg');
+}
+.tip--8 .border--bottom
+{
+    background-image: url('../images/tips/border__8.svg');
+}
+
+/*******************************************************************************
+ * Base
+ *******************************************************************************/
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline;
+
+    outline: 0;
+    background: transparent;
+}
+
+*::after,
+*::before
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+::-moz-focus-inner
+{
+    padding: 0; 
+
+    border: 0;
+}
+
+html
+{
+    font-size: 10px;
+
+    height: 100%;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body
+{
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.285;
+
+    overflow: hidden; 
+
+    min-height: 100%;
+
+    color: #4d4d4d;
+    background-color: #fff;
+
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+.pageloaded body
+{
+    overflow: auto;
+}
+
+.screen-reader-text
+{
+    position: absolute !important;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+
+    word-wrap: normal !important;
+}
+
+/*******************************************************************************
+ * Grid
+ *******************************************************************************/
+.page,
+.container
+{
+    position: relative;
+
+    display: block;
+
+    margin: 0 auto;
+    padding: 0;
+}
+.page::after,
+.page::before,
+.container::after,
+.container::before
+{
+    display: table; 
+
+    content: ' ';
+}
+.page::after,
+.container::after
+{
+    clear: both;
+}
+
+.page
+{
+    width: 100%;
+    max-width: 1920px;
+}
+
+.container
+{
+    width: 95%;
+    max-width: 320px;
+}
+
+.section,
+.row
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.section::after,
+.section::before,
+.row::after,
+.row::before
+{
+    display: table; 
+
+    content: ' ';
+}
+.section::after,
+.row::after
+{
+    clear: both;
+}
+
+.column
+{
+    position: relative;
+
+    display: inline-block;
+    float: left; 
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*******************************************************************************
+ * Typography
+ *******************************************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.285;
+
+    padding-top: -.275rem;
+    padding-bottom: -.275rem; 
+
+    text-transform: uppercase;
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
+}
+
+p
+{
+    font-size: 1.5rem;
+
+    padding-top: .225rem;
+    padding-bottom: .225rem;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+strong
+{
+    font-weight: 700;
+
+    display: inline-block; 
+
+    padding-bottom: .625rem;
+}
+
+/*******************************************************************************
+ * Lists
+ *******************************************************************************/
+ul
+{
+    list-style: none;
+}
+ul li
+{
+    font-size: 1.5rem;
+
+    padding-top: .225rem;
+    padding-bottom: .225rem;
+}
+
+/*******************************************************************************
+ * Images
+ *******************************************************************************/
+img
+{
+    position: relative;
+
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+}
+
+/*******************************************************************************
+ * Buttons
+ *******************************************************************************/
+.button
+{
+    width: 100%;
+}
+.button a
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    padding-bottom: 15.03164557%;
+
+    color: #4d4d4d;
+    background-image: url('../images/elements/button.svg'); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.button span
+{
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    position: absolute;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    text-align: center;
+    white-space: nowrap; 
+    text-transform: uppercase;
+}
+.button a:hover span
+{
+    color: #0fa55a;
+}
+
+/*******************************************************************************
+ * Helpers
+ *******************************************************************************/
+.nl
+{
+    display: block;
+}
+
+.aligner__helper
+{
+    display: table;
+
+    width: 100%; 
+    height: 100%;
+}
+.aligner__helper .aligner
+{
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+/*******************************************************************************
+ * Page
+ *******************************************************************************/
+/*******************************************************************************
+ * Header
+ *******************************************************************************/
+.header
+{
+    position: relative;
+
+    width: 100%;
+    padding-bottom: 110%;
+
+    text-align: center;
+
+    color: white;
+    background-image: url('../images/header/bg.jpg');
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+}
+.header__wrapper
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+
+    width: 100%;
+    height: 100%;
+}
+.header__title h1,
+.header__title h2,
+.header__title h3
+{
+    font-size: 1.5rem;
+
+    padding-top: .225rem;
+    padding-bottom: .225rem;
+}
+.header__tagline h1,
+.header__tagline h2,
+.header__tagline h3
+{
+    font-size: 1.5rem;
+    font-weight: normal; 
+
+    padding-top: .225rem;
+    padding-bottom: .225rem;
+
+    text-transform: none;
+}
+.header__matrix
+{
+    position: relative;
+
+    width: 100%;
+    padding-bottom: 48.413793103%;
+
+    background-image: url('../images/header/matrix.svg');
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+}
+.header__matrix__wrapper
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+
+    width: 100%;
+    height: 100%;
+}
+.header__matrix h1,
+.header__matrix h2,
+.header__matrix h3
+{
+    font-size: 1.2rem;
+
+    margin-top: 5%; 
+    padding-top: .225rem;
+    padding-bottom: .225rem;
+}
+.header .logo
+{
+    width: 38.888888889%;
+}
+.header .logo,
+.header__matrix
+{
+    margin-bottom: 1.25rem;
+}
+
+/*******************************************************************************
+ * Footer
+ *******************************************************************************/
+.footer.section
+{
+    margin-bottom: -.5rem;
+}
+
+.footer .tagline p
+{
+    margin-bottom: 1.25rem;
+}
+
+.footer .contacts
+{
+    font-weight: 700; 
+
+    color: #0fa55a;
+}
+.footer .contacts a
+{
+    color: #0fa55a;
+}
+
+.footer .title__svg
+{
+    width: 26.666666667%;
+}
+
+.footer .title__svg__image
+{
+    padding-bottom: 15.384615385%;
+
+    background-image: url('../images/footer/title.svg');
+}
+
+.footer:after
+{
+    display: block;
+
+    width: 100%;
+    height: auto;
+    padding-bottom: 47.237569061%; 
+
+    content: '';
+
+    background-image: url('../images/footer/matrix.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+/*******************************************************************************
+ * Sections
+ *******************************************************************************/
+.section
+{
+    margin-bottom: 1.25rem;
+}
+
+.video .title__svg
+{
+    width: 51.428571429%;
+}
+
+.video .title__svg__image
+{
+    padding-bottom: 10.559006211%;
+
+    background-image: url('../images/video/title.svg');
+}
+
+.video__content video
+{
+    width: 100%;
+    height: auto;
+}
+
+.video__tagline
+{
+    text-align: center;
+
+    color: #0fa55a;
+}
+.video__tagline h1,
+.video__tagline h2,
+.video__tagline h3
+{
+    font-size: 1.8rem;
+
+    padding-top: .125rem;
+    padding-bottom: .125rem;
+}
+
+.recommend__title
+{
+    width: 100%;
+    height: auto;
+    padding-bottom: 17%;
+
+    background-image: url('../images/recommend/title.svg');
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: contain;
+}
+
+.recommend__content
+{
+    padding-left: 21%;
+}
+
+.exclude .title__svg
+{
+    width: 79.365079365%;
+}
+
+.exclude .title__svg__image
+{
+    padding-bottom: 6.8%;
+
+    background-image: url('../images/exclude/title.svg');
+}
+
+.exclude:after
+{
+    display: block;
+
+    width: 100%;
+    height: auto;
+    padding-bottom: 51.878612717%; 
+
+    content: '';
+
+    background-image: url('../images/exclude/matrix.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.exclude ul li
+{
+    display: block;
+
+    margin-bottom: 1.25rem;
+}
+.exclude ul li:last-child
+{
+    margin-bottom: 0;
+}
+.exclude ul li:before
+{
+    display: inline-block;
+
+    width: 1em;
+    margin-left: 0; 
+
+    content: '•';
+
+    color: #0fa55a;
+}
+
+.tips .title__svg
+{
+    width: 20.317460317%;
+}
+
+.tips .title__svg__image
+{
+    padding-bottom: 20%;
+
+    background-image: url('../images/tips/title.svg');
+}
+
+.tech .title__svg
+{
+    width: 62.857142857%;
+}
+
+.tech .title__svg__image
+{
+    padding-bottom: 8.521303258%;
+
+    background-image: url('../images/tech/title.svg');
+}
+
+.get .title__svg
+{
+    width: 80.952380952%;
+}
+
+.get .title__svg__image
+{
+    padding-bottom: 6.653620352%;
+
+    background-image: url('../images/get/title.svg');
+}
+
+.who .title__svg
+{
+    width: 51.746031746%;
+}
+
+.who .title__svg__image
+{
+    padding-bottom: 24%;
+
+    background-image: url('../images/who/title.svg');
+}
+
+.section
+{
+    margin-bottom: 2.5rem;
+}
+
+.video__content,
+.video__tagline,
+.video .button,
+.recommend__content,
+.tech p,
+.tech .button,
+.get p,
+.who p
+{
+    margin-bottom: 1.25rem;
+}
