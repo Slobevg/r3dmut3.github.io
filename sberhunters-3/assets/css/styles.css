@@ -138,8 +138,8 @@
     padding-bottom: 26.025236593%;
 
     background-repeat: no-repeat; 
-    background-position: center center;
-    background-size: cover;
+    background-position: left bottom;
+    background-size: 100%;
 }
 .tip .border--right,
 .tip .border--left
@@ -674,13 +674,13 @@ img
 .chel__before:after
 {
     position: absolute;
-    top: 24%;
-    left: 25.5%; 
+    top: 23.15%;
+    left: 25.25%; 
 
     display: block;
 
-    width: 49%;
-    padding-bottom: 49%;
+    width: 49.5%;
+    padding-bottom: 49.5%;
 
     content: '';
 
@@ -704,25 +704,33 @@ img
 }
 .chel .arrow
 {
+    position: relative;
+
     display: inline-block;
 
-    width: 1.25rem;
-    height: 1.37295rem;
+    width: 1.5625rem;
+}
+.chel .arrow:after
+{
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    background-repeat: no-repeat; 
+    display: block; 
+
+    width: 1.5625rem;
+    height: 1.71619rem;
+
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
 }
-.chel .arrow--left
+.chel .arrow--left:after
 {
-    margin-right: .5em; 
-
     background-image: url('../images/chel/a-l.svg');
 }
-.chel .arrow--right
+.chel .arrow--right:after
 {
-    margin-left: .5em; 
-
     background-image: url('../images/chel/a-r.svg');
 }
 
@@ -951,4 +959,284 @@ img
 .who p
 {
     margin-bottom: 1.25rem;
+}
+
+.no-mobile .page
+{
+    max-width: 1920px; 
+    margin: 0 auto;
+}
+
+.no-mobile .main
+{
+    position: relative;
+
+    margin: 0 auto;
+    padding-right: 22.5%; 
+    padding-left: 37.5%;
+}
+.no-mobile .main::after,
+.no-mobile .main::before
+{
+    display: table; 
+
+    content: ' ';
+}
+.no-mobile .main::after
+{
+    clear: both;
+}
+.no-mobile .main .side
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 37.5%; 
+
+    background-image: url('../images/bg__main.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+}
+
+.no-mobile .container
+{
+    width: 100%;
+    max-width: 100%;
+}
+
+.no-mobile .section:after
+{
+    display: none;
+}
+
+.no-mobile .button
+{
+    width: 57.5%; 
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.no-mobile .header
+{
+    padding-bottom: 56.47%;
+
+    background-image: url('../images/header/header__full.jpg');
+}
+.no-mobile .header__wrapper
+{
+    display: none;
+}
+
+.no-mobile .chel__before
+{
+    display: none;
+}
+
+.no-mobile .chel__content
+{
+    padding: 15% 0 15% 15%;
+}
+.no-mobile .chel__content p
+{
+    font-size: 100%;
+}
+
+.no-mobile .kandidat .title__svg__image
+{
+    padding-bottom: 10.854947166%;
+
+    background-image: url('../images/kandidat/kandidat__desktop.svg');
+}
+
+.no-mobile .kandidat ul li
+{
+    position: relative;
+
+    display: block;
+
+    width: 50%;
+    margin-bottom: 0; 
+    padding-bottom: 12.5%;
+
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+}
+.no-mobile .kandidat ul li:nth-child(2)
+{
+    margin-left: 49%;
+}
+.no-mobile .kandidat ul li:nth-child(4)
+{
+    margin-left: 49%;
+}
+.no-mobile .kandidat ul li:nth-child(4) .item
+{
+    margin-top: 12.5%;
+}
+.no-mobile .kandidat ul li:nth-child(4) .item .note
+{
+    padding-top: 1.25rem;
+}
+
+.no-mobile .video .title__svg__image
+{
+    padding-bottom: 6.519654842%;
+
+    background-image: url('../images/video/title__desktop.svg');
+}
+
+.no-mobile .video .title--tagline
+{
+    width: 60%;
+}
+.no-mobile .video .title--tagline .title__svg__image
+{
+    padding-bottom: 14.974619289%;
+
+    background-image: url('../images/video/tagline.svg');
+}
+
+.no-mobile .recommend__title
+{
+    width: 80%;
+    padding-bottom: 12.323943662%;
+
+    background-image: url('../images/recommend/title__desktop.svg');
+}
+
+.no-mobile .recommend__content
+{
+    padding-left: 32%;
+}
+
+.no-mobile .exclude .title__svg__image
+{
+    padding-bottom: 6.628242075%;
+
+    background-image: url('../images/exclude/title__desktop.svg');
+}
+
+.no-mobile .exclude__content ul
+{
+    padding-left: 32%;
+}
+
+.no-mobile .tips .title__svg__image
+{
+    padding-bottom: 6.615532119%;
+
+    background-image: url('../images/tips/title__desktop.svg');
+}
+
+.no-mobile .tech .title__svg__image
+{
+    padding-bottom: 6.436119116%;
+
+    background-image: url('../images/tech/title__desktop.svg');
+}
+
+.no-mobile .tech__content
+{
+    padding-left: 32%;
+}
+
+.no-mobile .get .title__svg__image
+{
+    padding-bottom: 6.628242075%;
+
+    background-image: url('../images/get/title__desktop.svg');
+}
+
+.no-mobile .get__content
+{
+    padding-left: 32%;
+}
+
+.no-mobile .who .title__svg__image
+{
+    padding-bottom: 6.340057637%;
+
+    background-image: url('../images/who/title__desktop.svg');
+}
+
+.no-mobile .who__content
+{
+    padding-left: 32%;
+}
+
+.no-mobile .section
+{
+    margin-bottom: 3.75rem;
+}
+
+.no-mobile .tip__wrapper
+{
+    padding-bottom: 33%;
+}
+
+.no-mobile .tip__content
+{
+    padding-left: 25%;
+}
+
+.no-mobile .video__content,
+.no-mobile .video__tagline,
+.no-mobile .video .button,
+.no-mobile .recommend__content,
+.no-mobile .tech p,
+.no-mobile .tech .button,
+.no-mobile .get p,
+.no-mobile .who p
+{
+    margin-bottom: 1.875rem;
+}
+
+.no-mobile .footer p
+{
+    display: inline-block;
+    float: left;
+
+    width: 50%;
+    padding-right: 1.25rem;
+}
+
+.no-mobile .footer .title__svg__image
+{
+    padding-bottom: 6.340057637%;
+
+    background-image: url('../images/footer/title__desktop.svg');
+}
+
+@media all and (max-width: 1024px)
+{
+    .no-mobile .main
+    {
+        padding-right: 5%;
+    }
+    .no-mobile .kandidat ul li
+    {
+        width: 68%;
+        margin-bottom: 1.875rem; 
+        margin-left: 32%;
+    }
+    .no-mobile .kandidat ul li:nth-child(2)
+    {
+        margin-left: 32%;
+    }
+    .no-mobile .kandidat ul li:nth-child(4)
+    {
+        margin-left: 32%;
+    }
+    .no-mobile .kandidat ul li:nth-child(4) .item
+    {
+        margin-top: 5.5%;
+    }
+    .no-mobile .kandidat ul li:nth-child(4) .item .note
+    {
+        padding-top: 1.25rem;
+    }
 }
