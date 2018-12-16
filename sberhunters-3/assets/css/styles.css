@@ -561,9 +561,9 @@ img
     position: relative;
 
     width: 100%;
-    padding-bottom: 48.413793103%;
+    padding-bottom: 48.7777778%;
 
-    background-image: url('../images/header/matrix.svg');
+    background-image: url('../images/header/front.svg');
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
@@ -652,6 +652,84 @@ img
 .section
 {
     margin-bottom: 1.25rem;
+}
+
+.kandidat .title__svg__image
+{
+    padding-bottom: 24.399494311%;
+
+    background-image: url('../images/kandidat/kandidat.svg');
+}
+
+.kandidat:after
+{
+    display: block;
+
+    width: 100%;
+    height: auto;
+    padding-bottom: 50.346740638%; 
+
+    content: '';
+
+    background-image: url('../images/kandidat/matrix.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.kandidat ul li
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    margin-bottom: 1.25rem; 
+    padding-bottom: 25%;
+
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+}
+.kandidat ul li:nth-child(1)
+{
+    background-image: url('../images/kandidat/1.svg');
+}
+.kandidat ul li:nth-child(2)
+{
+    background-image: url('../images/kandidat/2.svg');
+}
+.kandidat ul li:nth-child(3)
+{
+    background-image: url('../images/kandidat/3.svg');
+}
+.kandidat ul li:nth-child(4)
+{
+    background-image: url('../images/kandidat/4.svg');
+}
+.kandidat ul li:nth-child(5)
+{
+    background-image: url('../images/kandidat/5.svg');
+}
+.kandidat ul li .item
+{
+    font-size: 1.2rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+}
+.kandidat ul li .item .note
+{
+    font-size: 85%;
+
+    padding-top: 1%;
 }
 
 .video .title__svg__image
@@ -768,6 +846,22 @@ img
     padding-bottom: 17.572692794%;
 
     background-image: url('../images/who/title.svg');
+}
+
+.who:after
+{
+    display: block;
+
+    width: 100%;
+    height: auto;
+    padding-bottom: 44.22310757%; 
+
+    content: '';
+
+    background-image: url('../images/who/matrix.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 .section
