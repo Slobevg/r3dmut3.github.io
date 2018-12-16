@@ -654,6 +654,78 @@ img
     margin-bottom: 1.25rem;
 }
 
+.chel
+{
+    width: 100%;
+    height: auto;
+}
+.chel__before
+{
+    position: relative; 
+
+    margin-top: -2.75rem;
+    padding-bottom: 64.777777778%;
+
+    background-image: url('../images/chel/back.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.chel__before:after
+{
+    position: absolute;
+    top: 24%;
+    left: 25.5%; 
+
+    display: block;
+
+    width: 49%;
+    padding-bottom: 49%;
+
+    content: '';
+
+    border-radius: 50%;
+    background-image: url('../images/chel/lexa.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.chel__content
+{
+    padding: 1.25rem 5%;
+}
+.chel__content p
+{
+    font-size: 90%;
+}
+.chel__content p.top
+{
+    margin-bottom: 1.25rem;
+}
+.chel .arrow
+{
+    display: inline-block;
+
+    width: 1.25rem;
+    height: 1.37295rem;
+
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: contain;
+}
+.chel .arrow--left
+{
+    margin-right: .5em; 
+
+    background-image: url('../images/chel/a-l.svg');
+}
+.chel .arrow--right
+{
+    margin-left: .5em; 
+
+    background-image: url('../images/chel/a-r.svg');
+}
+
 .kandidat .title__svg__image
 {
     padding-bottom: 24.399494311%;
