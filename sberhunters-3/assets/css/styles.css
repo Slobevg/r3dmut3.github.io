@@ -236,7 +236,7 @@
 
 .slick-prev
 {
-    margin-left: -26%;
+    margin-left: -27.5%;
 
     background-image: url('../images/elements/arrow__left.svg');
 }
@@ -1257,6 +1257,14 @@ img
 .section--expandable.active .preview
 {
     display: none;
+}
+.section--expandable.active button:before
+{
+    display: none;
+}
+.section--expandable.active button:after
+{
+    display: block;
 }
 .section--expandable.active:after
 {
