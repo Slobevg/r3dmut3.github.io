@@ -6,15 +6,18 @@
 
 <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
 
-<link rel="stylesheet" href="assets/css/reset.css?v=1543573576" />
-<link rel="stylesheet" href="assets/css/fonts.css?v=1543573576" />
-<link rel="stylesheet" href="assets/css/styles.css?v=1543573576" />
+<link rel="stylesheet" href="assets/css/reset.css" />
+<link rel="stylesheet" href="assets/css/fonts.css" />
+<link rel="stylesheet" href="assets/css/slick.css" />
+<link rel="stylesheet" href="assets/css/styles.css" />
 
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 
 <script src="assets/js/modernizr-custom.js"></script>
 <script src="assets/js/mobile-detect.min.js"></script>
 <script src="assets/js/mobile-detect-modernizr.js"></script>
+
+<script src="assets/js/slick.min.js"></script>
 
 <title>Мой кандидат</title>
 <link rel="icon" href="favicon.ico">
@@ -188,18 +191,21 @@
                 </div>
             </section>
 
-            <section class="section exclude">
+            <section class="section section--expandable exclude">
                 <div class="container">
                     <div class="element title">
                         <h3 class="title__headline">
                             <span class="title__svg">
                                 <span class="title__svg__image"></span>
                             </span>
+
                             <span class="screen-reader-text">Исключения из программы</span>
+
+                            <button class="button__expand" data-section="exclude"></button>
                         </h3>
                     </div>
 
-                    <div class="element exclude__content">
+                    <div class="element exclude__content expand__content">
                         <p>
                             <strong>Случаи, когда программа не применяется и премия не выдается:</strong>
                         </p>
@@ -384,18 +390,21 @@
                 </div>
             </section>
 
-            <section class="section tech">
+            <section class="section section--expandable tech">
                 <div class="container">
                     <div class="element title">
                         <h3 class="title__headline">
                             <span class="title__svg">
                                 <span class="title__svg__image"></span>
                             </span>
+
                             <span class="screen-reader-text">Технические вопросы</span>
+
+                            <button class="button__expand" data-section="tech"></button>
                         </h3>
                     </div>
 
-                    <div class="element tech__content">
+                    <div class="element tech__content expand__content faq">
                         <p>
                             <strong>Как я могу отслеживать свои рекомендации?</strong>
                             <span class="nl">В личном кабинете в системе SF</span>
@@ -428,18 +437,21 @@
                 </div>
             </section>
 
-            <section class="section get">
+            <section class="section section--expandable get">
                 <div class="container">
                     <div class="element title">
                         <h3 class="title__headline">
                             <span class="title__svg">
                                 <span class="title__svg__image"></span>
                             </span>
+
                             <span class="screen-reader-text">Получение вознаграждения</span>
+
+                            <button class="button__expand" data-section="get"></button>
                         </h3>
                     </div>
 
-                    <div class="element get__content">
+                    <div class="element get__content expand__content faq">
                         <p>
                             <strong>Когда предусмотрена выплата?</strong>
                             <span class="nl">После того, как кандидат отработает 3 месяца (в следующем календарном месяце)</span>
@@ -473,18 +485,21 @@
                 </div>
             </section>
 
-            <section class="section who">
+            <section class="section section--expandable who">
                 <div class="container">
                     <div class="element title">
                         <h3 class="title__headline">
                             <span class="title__svg">
                                 <span class="title__svg__image"></span>
                             </span>
+
                             <span class="screen-reader-text">Кого я могу порекомендовать</span>
+
+                            <button class="button__expand" data-section="who"></button>
                         </h3>
                     </div>
 
-                    <div class="element who__content">
+                    <div class="element who__content expand__content faq">
                         <p>
                             <strong>Могу ли я порекомендовать своего коллегу, который работает в Сбербанке или в ДЗО?</strong>
                             <span class="nl">Нет</span>
@@ -534,6 +549,39 @@
             setTimeout(function() {
                 $('html').addClass('pageloaded');
             }, timeout);
+        });
+
+        $('.button__expand').each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+
+                var section = $(this).data('section');
+
+                if ( $('body').find('.section.'+section).hasClass('active') ) {
+                    $('body').find('.section.active').removeClass('active');
+                } else {
+                    $('body').find('.section.active').removeClass('active');
+                    $('body').find('.section.'+section).addClass('active');
+                }
+
+            });
+
+        });
+
+        $('.tips__content ul').slick({
+            infinite: true,
+            speed: 250,
+            fade: true,
+            cssEase: 'linear',
+            dots: true,
+            dotsClass: 'paging',
+            customPaging: function (slider, i) {
+                //FYI just have a look at the object to find aviable information
+                //press f12 to access the console
+                //you could also debug or look in the source
+                console.log(slider);
+                return (i + 1) + '/' + slider.slideCount;
+            }
         });
     </script>
 </body>
