@@ -1747,22 +1747,20 @@ img
 
 @media all and (orientation: landscape)
 {
-    .mobile.phone .container
+    .mobile.phone body
     {
-        width: 55%;
+        background-color: #f1f1f1;
     }
-    .mobile.phone .header
+    .mobile.phone .page
     {
-        /*
-            padding-bottom: 53.59375%;
-            background-image: url('../images/header/header__full--alt.jpg');
+        overflow: hidden;
 
-            &__wrapper { display: none; }
-            */
-    }
-    .mobile.phone .section:after
-    {
-        display: none;
+        width: 50%;
+        max-width: 1920px;
+
+        background-color: white;
+        -webkit-box-shadow: 0 9px 0 0 white, 0 -9px 0 0 white, 12px 0 25px -4px rgba(31, 73, 125, .2), -12px 0 25px -4px rgba(31, 73, 125, .2);
+                box-shadow: 0 9px 0 0 white, 0 -9px 0 0 white, 12px 0 25px -4px rgba(31, 73, 125, .2), -12px 0 25px -4px rgba(31, 73, 125, .2);
     }
 }
 
