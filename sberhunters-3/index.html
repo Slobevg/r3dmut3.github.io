@@ -19,10 +19,25 @@
 
 <script src="assets/js/slick.min.js"></script>
 
-<title>Мой кандидат</title>
+<title>Сеть	профессионалов</title>
 <link rel="icon" href="favicon.ico">
 </head>
 <body>
+    <noscript>
+        <div class="warning__wrapper">
+            <div class="aligner__helper">
+                <div class="aligner">
+                    <div class="warning">
+                        <p>
+                            Для полной функциональности этого сайта<br/>
+                            <strong>необходимо включить JavaScript</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+    
     <div class="page">
         <header class="header">
             <div class="header__wrapper">
@@ -71,6 +86,8 @@
                         <p class="top"><span class="nl"><span class="arrow arrow--left"></span>Привет, я Алексей! Как-то раз друг</span> <span class="nl">рассказал мне о новой вакансии</span> <span class="nl">Сбербанка: я откликнулся и</span> <span class="nl">прошел отбор, работаю уже</span> <span class="nl">больше года!</span></p>
                         <p class="bottom"><span class="nl">Хорошо, что Сбербанк дает</span> <span class="nl">возможность формировать</span> <span class="nl">команду!<span class="arrow arrow--right"></span></span></p>
                     </div>
+
+                    <div class="chel__quote"></div>
                 </div>
             </section>
 
@@ -203,6 +220,16 @@
 
                             <button class="button__expand" data-section="exclude"></button>
                         </h3>
+                    </div>
+
+                    <div class="element exclude__content preview">
+                        <p>
+                            <strong>Случаи, когда программа не применяется и премия не выдается:</strong>
+                        </p>
+
+                        <ul>
+                            <li>Рекомендатель является функциональным, административным, вышестоящим руководителем кандидата (реферала) либо Владельцем продукта Команды, в которую осуществляется найм реферала...</li>
+                        </ul>
                     </div>
 
                     <div class="element exclude__content expand__content">
@@ -542,7 +569,34 @@
         </main>
     </div>
 
+    <div class="preloader">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div class="warning__wrapper warning__wrapper--upgrade">
+        <div class="aligner__helper">
+            <div class="aligner">
+                <div class="warning">
+                    <p>
+                        Для полной функциональности этого сайта<br/>
+                        <strong>необходимо обновить браузер</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        if (Modernizr.flexbox !== true || Modernizr.mediaqueries !== true || Modernizr.csstransforms !== true ) {
+            $('body').css('overflow', 'hidden').css('height', '100%');
+            $('body').find('.warning__wrapper--upgrade').css('display', 'block');
+            $('body').find('.page').css('display', 'none');
+        }
+
         $(window).bind('load',function() {
             var timeout = 1;
 
