@@ -236,7 +236,7 @@
 
 .slick-prev
 {
-    margin-left: -25%;
+    margin-left: -26%;
 
     background-image: url('../images/elements/arrow__left.svg');
 }
@@ -1017,7 +1017,8 @@ img
 
     width: 100%;
     height: auto;
-    padding-bottom: 50.346740638%; 
+    margin-top: 1.875rem; 
+    padding-bottom: 50.346740638%;
 
     content: '';
 
@@ -1276,6 +1277,12 @@ img
 .who p
 {
     margin-bottom: 1.25rem;
+}
+
+.mobile .exclude p,
+.mobile .exclude ul
+{
+    padding-left: 1.25rem;
 }
 
 .tablet .page,
@@ -1641,53 +1648,62 @@ img
     }
 }
 
+@media all and (orientation: portrait) and (max-width: 1023px)
+{
+    html.tablet,
+    html.no-mobile
+    {
+        font-size: 9px;
+    }
+}
+
 @media all and (orientation: portrait)
 {
     .tablet .chel__quote,
     .no-mobile .chel__quote
     {
-        margin-top: 10%;
-        margin-bottom: 10%; 
+        margin-top: 15%;
+        margin-bottom: 5%; 
         margin-left: 10%;
     }
     .tablet .recommend__content,
     .no-mobile .recommend__content
     {
-        padding-left: 16%;
+        padding-left: 8%;
     }
     .tablet .exclude__content p,
     .tablet .exclude__content ul,
     .no-mobile .exclude__content p,
     .no-mobile .exclude__content ul
     {
-        padding-left: 16%;
+        padding-left: 8%;
     }
     .tablet .exclude .preview p,
     .tablet .exclude .preview ul,
     .no-mobile .exclude .preview p,
     .no-mobile .exclude .preview ul
     {
-        padding-left: 16%;
+        padding-left: 8%;
     }
     .tablet .tech__content,
     .no-mobile .tech__content
     {
-        padding-left: 16%;
+        padding-left: 8%;
     }
     .tablet .tech .button,
     .no-mobile .tech .button
     {
-        padding-left: 16%;
+        padding-left: 8%;
     }
     .tablet .get__content,
     .no-mobile .get__content
     {
-        padding-left: 16%;
+        padding-left: 8%;
     }
     .tablet .who__content,
     .no-mobile .who__content
     {
-        padding-left: 16%;
+        padding-left: 8%;
     }
 }
 
@@ -1721,19 +1737,13 @@ img
     }
 }
 
-.mobile .exclude p,
-.mobile .exclude ul
-{
-    padding-left: 1.25rem;
-}
-
 @media all and (orientation: landscape)
 {
-    .mobile .container
+    .mobile.phone .container
     {
         width: 55%;
     }
-    .mobile .header
+    .mobile.phone .header
     {
         /*
             padding-bottom: 53.59375%;
@@ -1742,7 +1752,7 @@ img
             &__wrapper { display: none; }
             */
     }
-    .mobile .section:after
+    .mobile.phone .section:after
     {
         display: none;
     }
