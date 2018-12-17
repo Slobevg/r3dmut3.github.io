@@ -1757,3 +1757,23 @@ img
         display: none;
     }
 }
+
+@media all and (min-width: 1920px)
+{
+    .no-mobile body,
+    .tablet body
+    {
+        background-color: #f1f1f1;
+    }
+    .no-mobile .page,
+    .tablet .page
+    {
+        overflow: hidden;
+
+        max-width: 1920px;
+
+        background-color: white;
+        -webkit-box-shadow: 0 9px 0 0 white, 0 -9px 0 0 white, 12px 0 25px -4px rgba(31, 73, 125, .2), -12px 0 25px -4px rgba(31, 73, 125, .2);
+                box-shadow: 0 9px 0 0 white, 0 -9px 0 0 white, 12px 0 25px -4px rgba(31, 73, 125, .2), -12px 0 25px -4px rgba(31, 73, 125, .2);
+    }
+}
