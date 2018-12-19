@@ -610,6 +610,17 @@ img
     vertical-align: middle;
 }
 
+a
+{
+    text-decoration: underline; 
+
+    color: #4d4d4d;
+}
+a:hover
+{
+    color: #0fa55a;
+}
+
 /*******************************************************************************
  * Buttons
  *******************************************************************************/
@@ -626,8 +637,10 @@ img
     width: 100%;
     padding-bottom: 15.03164557%;
 
+    letter-spacing: -.1rem; 
+
     color: #4d4d4d;
-    background-image: url('../images/elements/button.svg'); 
+    background-image: url('../images/elements/button.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -831,6 +844,8 @@ img
 }
 .footer .contacts a
 {
+    text-decoration: none; 
+
     color: #0fa55a;
 }
 
