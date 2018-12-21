@@ -1776,6 +1776,34 @@ a:hover
     }
 }
 
+@media all and (max-width: 899px)
+{
+    .tablet .kandidat ul li .item,
+    .no-mobile .kandidat ul li .item
+    {
+        font-size: 1.5rem;
+    }
+    .tablet .kandidat ul li .item .note,
+    .no-mobile .kandidat ul li .item .note
+    {
+        font-size: 1.1rem;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1279px)
+{
+    .tablet .kandidat ul li .item,
+    .no-mobile .kandidat ul li .item
+    {
+        font-size: 1.5rem;
+    }
+    .tablet .kandidat ul li .item .note,
+    .no-mobile .kandidat ul li .item .note
+    {
+        font-size: 1.1rem;
+    }
+}
+
 @media all and (orientation: landscape)
 {
     .mobile.phone body
